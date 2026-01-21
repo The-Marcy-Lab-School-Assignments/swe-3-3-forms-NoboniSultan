@@ -9,30 +9,96 @@
 </head>
 
 <body>
-    <main>
 
+    <header>
         <!-- The page's title -->
         <h1>NYC Tech Summit 2026</h1>
-        <div class="event-info">March 15, 2026|9:00 AM - 5:00 PM|Manhattan Conference Center</div>
-        <form method="POST" action="https://formspree.io/f/mykkdleb">
+        <p>March 15, 2026|9:00 AM - 5:00 PM|Manhattan Conference Center</p>
+    </header>
 
-            <h2 class="section-title">Event RSVP</h2>
+    <main>
+        <div class="form-container">
+            <form method="POST" action="https://formspree.io/f/mykkdleb">
 
-            <div class="form-row">
-                <div class="form-field">
-                    <label for="name">First Name</label>
-                    <input type="text" id="name" name="firstName">
+                <h2>Event RSVP</h2>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="name">First Name</label>
+                        <input type="text" id="name" name="firstName">
+                    </div>
+                    <div class="form-field">
+                        <label for="name">Last Name</label>
+                        <input type="text" id="name" name="lastName">
+                    </div>
                 </div>
-                <div class="form-field">
-                    <label for="name">Last Name</label>
-                    <input type="text" id="name" name="lastName">
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-field">
+                        <label for="tickets">Number of Tickets</label>
+                        <input type="number" id="tickets" name="tickets" />
+                    </div>
                 </div>
+
+                <!-- Lunch Preference -->
+                <fieldset>
+                    <legend>Lunch Preference</legend>
+
+                    <div class="radio-option">
+                        <input type="radio" id="chicken" name="lunch" value="chicken" />
+                        <label for="chicken">Chicken</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="fish" name="lunch" value="fish" />
+                        <label for="fish">Fish</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="vegetatian" name="lunch" value="vegetarian" />
+                        <label for="vegetarian">Vegetarian</label>
+                    </div>
+                </fieldset>
+
+                <!-- Workshop Sessions -->
+                <fieldset>
+                    <legend>Select Workshop Sessions (Check all that apply)</legend>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="session1" name="sessions" value="session1">
+                        <label for="session1">Session 1</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="session2" name="sessions" value="session2">
+                        <label for="session2">Session 2</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="session3" name="sessions" value="session3">
+                        <label for="session3">Session 3</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="session4" name="sessions" value="session4">
+                        <label for="session4">Session 4</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="session5" name="sessions" value="session5">
+                        <label for="session5">Session 5</label>
+                    </div>
+                </fieldset>
+
+                <!-- Notes -->
                 <div class="form-field">
-                    <label for="salary">Expected Salary</label>
-                    <input type="number" id="salary" name="salary">
+                    <label for="notes">Special Requests or Notes</label>
+                    <textarea id="notes" rows="10" cols="40"
+                        placeholder="Dietary restrictions, accessibility needs, questions, etc." name="notes">
+                    </textarea>
                 </div>
-            </div>
-        </form>
+
+                <button>Complete RSVP</button>
+            </form>
+        </div>
+
     </main>
 
     <footer>
