@@ -29,28 +29,40 @@ ul {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: var(--color-background);
   color: var(--color-text);
   padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 5px;
-  padding-bottom: 20px;
-  color: #333;
 }
 
 header p {
-  text-align: center;
-  color: #000000;
+  color: var(--color-text);
   margin-top: 0;
-  font-size: small;
+}
+
+main {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.form-container {
+  background-color: var(--color-form-background);
 }
 
 h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-primary);
   margin-bottom: 20px;
-  margin-bottom: var(--color-primary-dark);
 }
 
 form {
@@ -69,14 +81,15 @@ input,
 textarea,
 select {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border);
   border-radius: 4px;
 }
+
 
 button {
   background-color: var(--color-primary);
   color: white;
-  padding: 12px 30px;
+  padding: 12px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -103,35 +116,25 @@ button:hover {
   flex: 1;
 }
 
-.checkbox-field {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.radio-group {
+.checkbox-option {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  padding: 10px;
+  gap: 10px;
+  padding: 15px;
   margin-bottom: 20px;
 }
 
 .radio-option {
   display: flex;
-  align-items: center;
-  gap: 5px;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {
   .form-row {
     flex-direction: column;
     gap: 0;
-  }
-
-  .radio-group {
-    flex-direction: column;
-    gap: 10px;
   }
 }
